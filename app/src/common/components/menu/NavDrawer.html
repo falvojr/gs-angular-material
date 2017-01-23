@@ -1,0 +1,44 @@
+<md-toolbar md-scroll-shrink="false">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Abrir Menu" ng-click="$ctrl.toggle()">
+      <md-icon md-svg-icon="menu"></md-icon>
+    </md-button>
+    <h1>Digio Backoffice</h1>
+  </div>
+</md-toolbar>
+
+<!-- menu -->
+<md-sidenav md-component-id="left" class="md-sidenav-left">
+  <md-toolbar md-scroll-shrink="true">
+    <div class="md-toolbar-tools">
+      <h2>Menu</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Fechar Menu" ng-click="$ctrl.toggle()">
+        <md-icon md-svg-icon="close"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-content>
+    <md-list ng-repeat="section in $ctrl.sections">
+      <!-- md-subheader class="md-no-sticky">{{section.name}}</md-subheader -->
+      <!-- md-divider></md-divider -->
+      <md-list-item class="md-2-line" ng-repeat="item in section.itens" ng-click="$ctrl.open(item)">
+        <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
+        <div class="md-list-item-text">
+          <span class="md-body-2">{{item.name}}</span>
+        </div>
+      </md-list-item>
+    </md-list>
+    <md-divider></md-divider>
+    <md-list>
+      <md-list-item class="md-2-line" ng-click="$ctrl.logoff()">
+        <md-icon md-svg-icon="exit" aria-label="Sair"></md-icon>
+        <div class="md-list-item-text">
+          <span class="md-body-2">Sair</span>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</md-sidenav>
+<!-- end menu -->
