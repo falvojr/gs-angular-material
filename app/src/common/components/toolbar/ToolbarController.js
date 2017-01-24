@@ -1,4 +1,4 @@
-class NavDrawerController {
+class ToolbarController {
 
   constructor ($mdSidenav, $location) {
     this.$mdSidenav = $mdSidenav
@@ -18,4 +18,4 @@ class NavDrawerController {
     console.log('Logoff')
   }
 }
-export default NavDrawerController
+export default ToolbarController

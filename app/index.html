@@ -16,18 +16,14 @@
 
   <header>
     <nav>
-      <nav-drawer user="app.user" sections="app.sections" />
+      <toolbar user="app.user" sections="app.sections" />
     </nav>
   </header>
 
-  <main>
-    <md-content class="main">
-      <div class="main-content">
-        <div flex-gt-sm="90" flex-gt-md="80" ng-view>
-        </div>
-      </div>
-    </md-content>
-  </main>
+<md-content flex>
+  <div flex-gt-sm="90" flex-gt-md="80" ng-view>
+  </div>
+</md-content>
 
   <script src="./jspm_packages/system.js" type="text/javascript"></script>
   <script src="config.js" type="text/javascript"></script>

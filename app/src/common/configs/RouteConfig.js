@@ -1,6 +1,6 @@
 export default function routeConfig ($routeProvider) {
   $routeProvider
-      .when('/', {
+      .when('/files', {
         templateUrl: 'src/files/components/list/FilesList.html'
       })
 }

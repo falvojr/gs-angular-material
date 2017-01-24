@@ -11,7 +11,7 @@ angular.element(document)
     angular
       .module('app-bootstrap', [ App.name ])
       .run(() => {
-        console.log(`Running the 'app-bootstrap' ES6`)
+        console.log(`Running the 'app-bootstrap' (ES6)`)
       })
 
     let body = document.getElementsByTagName('body')[0]

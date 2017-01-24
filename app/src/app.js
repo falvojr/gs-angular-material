@@ -8,8 +8,7 @@ import 'angular-route'
 
 import AppController from 'src/AppController'
 
-import Users from 'src/users/Users'
 import Common from 'src/common/Common'
 
-export default angular.module('app', [ 'ngMaterial', 'ngRoute', Common.name, Users.name ])
+export default angular.module('app', [ 'ngMaterial', 'ngRoute', Common.name ])
   .controller('AppController', AppController)

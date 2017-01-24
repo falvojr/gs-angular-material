@@ -4,20 +4,22 @@ import IconConfig from 'src/common/configs/IconConfig'
 import RouteConfig from 'src/common/configs/RouteConfig'
 import ThemeConfig from 'src/common/configs/ThemeConfig'
 
-import AuthService from 'src/common/services/AuthService'
-import NavDrawerService from 'src/common/services/NavDrawerService'
+import BasicAuthService from 'src/common/services/BasicAuthService'
+import MenuService from 'src/common/services/MenuService'
 
-import NavDrawer from 'src/common/components/menu/NavDrawer'
+import Toolbar from 'src/common/components/toolbar/Toolbar'
+import LoginDialog from 'src/common/components/login/LoginDialog'
 
 // Define the Angular 'common' module
 
 export default angular
   .module('common', ['ngMaterial'])
 
-  .component(NavDrawer.name, NavDrawer.config)
+  .component(Toolbar.name, Toolbar.config)
+  .component(LoginDialog.name, LoginDialog.config)
 
-  .service('NavDrawerService', NavDrawerService)
-  .service('AuthService', AuthService)
+  .service('MenuService', MenuService)
+  .service('BasicAuthService', BasicAuthService)
 
   .config(IconConfig)
   .config(RouteConfig)

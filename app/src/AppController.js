@@ -1,15 +1,14 @@
 /**
  * Main App Controller for the Angular Material Starter App
- * @param NavDrawerService
- * @param $mdSidenav
+ * @param MenuService
  * @constructor
  */
-function AppController (NavDrawerService) {
+function AppController (MenuService) {
   var self = this
 
   self.user = {}
 
-  NavDrawerService.getSections()
+  MenuService.getSections()
       .then(function (sections) {
         self.sections = [].concat(sections)
       })
@@ -19,4 +18,4 @@ function AppController (NavDrawerService) {
   // *********************************
 }
 
-export default [ 'NavDrawerService', AppController ]
+export default [ 'MenuService', AppController ]

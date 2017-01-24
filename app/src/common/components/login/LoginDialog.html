@@ -1,0 +1,28 @@
+<md-dialog id="login-dialog" aria-label="Login" ng-cloak>
+  <form name="loginForm" ng-submit="$ctrl.login()">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Log In</h2>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-input-container class="md-block">
+          <label>Username</label>
+          <input name="username" ng-model="$ctrl.user.username" md-autofocus required />
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input type="password" name="password" ng-model="$ctrl.user.password" required />
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <a href="" class="md-primary">Esqueceu sua senha?</a>
+      <span flex></span>
+      <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Login</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

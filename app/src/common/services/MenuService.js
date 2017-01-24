@@ -1,4 +1,4 @@
-function NavDrawerService ($q) {
+function ToolbarService ($q) {
   var sections = [
     buildMainMenu()
   ]
@@ -22,4 +22,4 @@ function NavDrawerService ($q) {
   }
 }
 
-export default ['$q', NavDrawerService]
+export default ['$q', ToolbarService]
